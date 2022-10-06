@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.quiz-app {
+    width: 1200px;
+    margin: 50px auto;
+    background-color: #eee;
+    padding: 20px;
+}
+
+.quiz-app .quiz-info {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quiz-app .quiz-area {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.quiz-app .quiz-area .question {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.quiz-app .quiz-answers {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.quiz-app .quiz-answers .answer {
+    padding: 20px;
+}
+
+.quiz-app .quiz-answers .answer:not(:last-child) {
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.quiz-app .quiz-answers .answer input[type="Radio"] {
+    accent-color: #0075ff;
+}
+
+.quiz-app .quiz-answers .answer input[type="Radio"]:checked + label {
+    color: #0075ff;
+}
+
+.quiz-app .quiz-answers .answer label {
+    cursor: pointer;
+}
+
+.submit {
+    background-color: #0075ff;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.bullets {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bullets .spans {
+    display: flex;
+    gap: 3px;
+}
+
+.bullets .spans span {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #eee;
+}
+
+.bullets .spans span.on {
+    background-color: #0075ff;
+}
+
+.result .perfect {
+    color: #0075ff;
+}
+
+.result .good {
+    color: #009688;
+}
+
+.result .bad {
+    color: #f44336;
+}
+
+.right-answers {
+    color: #3f51b5;
+}
+
+.total-answers {
+    color: #607d8b;
+}
