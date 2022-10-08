@@ -63,7 +63,15 @@ body {
 }
 
 .quiz-app .quiz-answers .answer label {
+    margin-left: 20px;
     cursor: pointer;
+}
+
+.quiz-app .quiz-answers .answer label.right {
+    color: green;
+}
+.quiz-app .quiz-answers .answer label.wrong {
+    color: red;
 }
 
 .submit {
@@ -77,6 +85,7 @@ body {
     margin-top: 20px;
     margin-bottom: 20px;
     cursor: pointer;
+    user-select: none;
 }
 
 .bullets {
