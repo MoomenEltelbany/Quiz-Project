@@ -5,6 +5,7 @@ let quizAnswers = document.querySelector(".quiz-answers");
 let submitBtn = document.querySelector(".submit");
 let rightAnswers = document.querySelector(".right-answers");
 let totalAnswers = document.querySelector(".total-answers");
+let result = document.querySelector(".results .result");
 
 // Setting up auxiliary elements
 let indexCount = 0;
@@ -34,8 +35,29 @@ function getsQuestion() {
                 // Check if the question are finished or not
                 // If yes, the button will be removed as well as the answers
                 if (indexCount === questionObjectLength - 1) {
-                    quizAnswers.innerHTML = "";
+                    // Remove the submit button
                     submitBtn.remove();
+                    // After one second, we remove the whole quiz area (Question and answers)
+                    setTimeout(() => {
+                        quizAnswers.innerHTML = "";
+                    }, 1000);
+                    // We check the result only if the last questions
+                    checkTheRightAnswer(
+                        questionObject[questionObjectLength - 1]["right_answer"]
+                    );
+                    console.log(rightAnswers.innerHTML, totalAnswers.innerHTML);
+                    if (+rightAnswers.innerHTML < +totalAnswers.innerHTML / 2) {
+                        result.classList.add("bad");
+                        result.innerHTML = "Bad Score,";
+                    } else if (
+                        +rightAnswers.innerHTML < +totalAnswers.innerHTML
+                    ) {
+                        result.classList.add("good");
+                        result.innerHTML = "Moderate Score,";
+                    } else {
+                        result.classList.add("perfect");
+                        result.innerHTML = "Perfect Score,";
+                    }
                 } else {
                     let rightAnswer =
                         questionObject[indexCount]["right_answer"];
@@ -97,6 +119,7 @@ function showQuestions(obj, len) {
     // As the question inside the object is with the name of title, we used it to add to the page
     pQuestion.innerText = obj.title;
 
+    // The for loop to create the divs that contains all the answers
     for (let i = 1; i <= 4; i++) {
         let answerDiv = document.createElement("div");
         answerDiv.className = "answer";
@@ -122,7 +145,8 @@ function showQuestions(obj, len) {
     quizAnswers.prepend(pQuestion);
 }
 
-function checkTheRightAnswer(rightAnswer, len) {
+// Function that takes the right answer and compare it to the chosen answer of the user
+function checkTheRightAnswer(rightAnswer) {
     let allInputs = Array.from(document.querySelectorAll(".answer input"));
     let chosenAnswer;
 
@@ -136,7 +160,5 @@ function checkTheRightAnswer(rightAnswer, len) {
         // Increment the right answer by one
         rightAnswersCount++;
         rightAnswers.innerHTML = rightAnswersCount;
-    } else {
-        console.log("Bads");
     }
 }
