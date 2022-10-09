@@ -26,6 +26,38 @@ body {
     align-items: center;
 }
 
+header {
+    color: white;
+    background-color: white;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header > div {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+header > div.active {
+    opacity: 1;
+}
+
+header header .html {
+    background-color: #db4d25;
+}
+header .css {
+    background-color: #2662e9;
+}
+header .js {
+    background-color: #f6c13a;
+}
 .quiz-app .quiz-area {
     background-color: white;
     padding: 20px;

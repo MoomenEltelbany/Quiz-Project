@@ -6,10 +6,12 @@ let submitBtn = document.querySelector(".submit");
 let rightAnswers = document.querySelector(".right-answers");
 let totalAnswers = document.querySelector(".total-answers");
 let result = document.querySelector(".results .result");
+let countDown = document.querySelector(".count-down");
 
 // Setting up auxiliary elements
 let indexCount = 0;
 let rightAnswersCount = 0;
+let countDownInterval;
 
 function getsQuestion() {
     let myRequest = new XMLHttpRequest();
@@ -31,6 +33,7 @@ function getsQuestion() {
             rightAnswers.innerHTML = rightAnswersCount;
 
             // Click on the submit button function
+            timer(10, questionObjectLength);
             submitBtn.onclick = () => {
                 // Check if the question are finished or not
                 // If yes, the button will be removed as well as the answers
@@ -45,7 +48,6 @@ function getsQuestion() {
                     checkTheRightAnswer(
                         questionObject[questionObjectLength - 1]["right_answer"]
                     );
-                    console.log(rightAnswers.innerHTML, totalAnswers.innerHTML);
                     if (+rightAnswers.innerHTML < +totalAnswers.innerHTML / 2) {
                         result.classList.add("bad");
                         result.innerHTML = "Bad Score,";
@@ -78,6 +80,10 @@ function getsQuestion() {
                     );
 
                     nextSpanOn(indexCount);
+
+                    // The count down function
+                    clearInterval(countDownInterval);
+                    timer(3, questionObjectLength);
                 }
             };
         }
@@ -161,4 +167,23 @@ function checkTheRightAnswer(rightAnswer) {
         rightAnswersCount++;
         rightAnswers.innerHTML = rightAnswersCount;
     }
+}
+
+// The count down function that takes the duration and make a count down
+function timer(duration) {
+    let minutes, seconds;
+
+    countDownInterval = setInterval(() => {
+        minutes = parseInt(duration / 60);
+        seconds = parseInt(duration % 60);
+
+        minutes = minutes < 10 ? `0${minutes}` : minutes;
+        seconds = seconds < 10 ? `0${seconds}` : seconds;
+
+        countDown.innerHTML = `${minutes} : ${seconds}`;
+        if (--duration < 0) {
+            clearInterval(countDownInterval);
+            submitBtn.click();
+        }
+    }, 1000);
 }
