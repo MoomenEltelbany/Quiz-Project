@@ -17,6 +17,7 @@ let rightAnswersCount = 0;
 let countDownInterval;
 let languageSelect;
 
+// Adding the active class to the chosen category
 languagesBtns.forEach((btn) => {
     btn.onclick = () => {
         languagesBtns.forEach((btn) => {
@@ -27,9 +28,13 @@ languagesBtns.forEach((btn) => {
     };
 });
 
+// Starting the game by clicking on the start button
 startGame.onclick = () => {
+    // Here we pass the parameter to choose which category we will generate the questions
     getsQuestion(categoryName.innerHTML.toLowerCase());
 };
+
+// The function that will generate the questions and answers
 function getsQuestion(fileName) {
     let myRequest = new XMLHttpRequest();
 
