@@ -1,0 +1,74 @@
+[
+    {
+        "title": " When a user views a page containing a JavaScript program, which machine actually executes the script?",
+        "answer_1": "The User's machine running a Web browser",
+        "answer_2": " The Web server",
+        "answer_3": "A central machine deep within Netscape's corporate offices",
+        "answer_4": "None of the above",
+        "right_answer": "The User's machine running a Web browser"
+    },
+    {
+        "title": "What are variables used for in JavaScript Programs?",
+        "answer_1": "Varying randomly",
+        "answer_2": "Storing numbers, dates, or other values",
+        "answer_3": " Causing high-school algebra flashbacks",
+        "answer_4": "None of the above",
+        "right_answer": "Storing numbers, dates, or other values"
+    },
+    {
+        "title": "JavaScript statements embedded in an HTML page can respond to user events such as mouse-clicks, form input, and page navigation.",
+        "answer_1": "Local",
+        "answer_2": "Native",
+        "answer_3": "Server-side",
+        "answer_4": "Client-side",
+        "right_answer": "Client-side"
+    },
+    {
+        "title": "Which of the following can't be done with client-side JavaScript?",
+        "answer_1": "Validating a form",
+        "answer_2": "Sending a form's contents by email",
+        "answer_3": "Storing the form's contents to a database file on the server",
+        "answer_4": "None of the above",
+        "right_answer": "Storing the form's contents to a database file on the server"
+    },
+    {
+        "title": "Which of the following is not a valid JavaScript variable name?",
+        "answer_1": "2names",
+        "answer_2": "_first_and_last_names",
+        "answer_3": "FirstAndLast",
+        "answer_4": " None of the above",
+        "right_answer": "2names"
+    },
+    {
+        "title": "How does JavaScript store dates in a date object?",
+        "answer_1": "The number of days since January 1st, 1900",
+        "answer_2": "The number of seconds since Netscape's public stock offering.",
+        "answer_3": "The number of milliseconds since January 1st, 1970",
+        "answer_4": "None of the above",
+        "right_answer": "The number of milliseconds since January 1st, 1970"
+    },
+    {
+        "title": "Which is the correct way to write a JavaScript array?",
+        "answer_1": "var txt = new Array(1:”tim”,2:”kim”,3:”jim”)",
+        "answer_2": "var txt = new Array:1=(“tim”)2=(“kim”)3=(“jim”)",
+        "answer_3": "var txt = new Array=”tim”,”kim”,”jim”",
+        "answer_4": "var txt = new Array(“tim”,”kim”,”jim”)",
+        "right_answer": "var txt = new Array(“tim”,”kim”,”jim”)"
+    },
+    {
+        "title": "If para1 is the DOM object for a paragraph, what is the correct syntax to change the text within the paragraph?",
+        "answer_1": "“New Text”?",
+        "answer_2": "para1.value=”New Text”",
+        "answer_3": "para1.firstChild.nodeValue= “New Text”",
+        "answer_4": "para1.nodeValue=”New Text”",
+        "right_answer": "para1.value=”New Text”"
+    },
+    {
+        "title": "Which of the following event fires when the form element loses the focus: <button>, <input>, <label>, <select>, <textarea>?",
+        "answer_1": "onblur",
+        "answer_2": "onfocus",
+        "answer_3": "onclick",
+        "answer_4": "ondbclick",
+        "right_answer": "onblur"
+    }
+]

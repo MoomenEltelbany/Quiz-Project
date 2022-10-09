@@ -49,7 +49,7 @@ header > div.active {
     opacity: 1;
 }
 
-header header .html {
+header .html {
     background-color: #db4d25;
 }
 header .css {
@@ -57,6 +57,18 @@ header .css {
 }
 header .js {
     background-color: #f6c13a;
+}
+
+.start {
+    background-color: #607d8b;
+    width: 350px;
+    font-size: 25px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
 }
 .quiz-app .quiz-area {
     background-color: white;

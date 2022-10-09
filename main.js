@@ -1,4 +1,6 @@
 // Capturing the elements of HTML
+let categoryName = document.querySelector(".category-name");
+let startGame = document.querySelector(".start");
 let questionCount = document.querySelector(".quiz-info .q-count");
 let spansArea = document.querySelector(".bullets .spans");
 let quizAnswers = document.querySelector(".quiz-answers");
@@ -7,13 +9,28 @@ let rightAnswers = document.querySelector(".right-answers");
 let totalAnswers = document.querySelector(".total-answers");
 let result = document.querySelector(".results .result");
 let countDown = document.querySelector(".count-down");
+let languagesBtns = document.querySelectorAll(".category div");
 
 // Setting up auxiliary elements
 let indexCount = 0;
 let rightAnswersCount = 0;
 let countDownInterval;
+let languageSelect;
 
-function getsQuestion() {
+languagesBtns.forEach((btn) => {
+    btn.onclick = () => {
+        languagesBtns.forEach((btn) => {
+            btn.classList.remove("active");
+        });
+        btn.classList.add("active");
+        categoryName.innerHTML = btn.innerHTML;
+    };
+});
+
+startGame.onclick = () => {
+    getsQuestion(categoryName.innerHTML.toLowerCase());
+};
+function getsQuestion(fileName) {
     let myRequest = new XMLHttpRequest();
 
     myRequest.onreadystatechange = () => {
@@ -88,11 +105,9 @@ function getsQuestion() {
             };
         }
     };
-    myRequest.open("GET", "html.json", true);
+    myRequest.open("GET", `${fileName}.json`, true);
     myRequest.send();
 }
-
-getsQuestion();
 
 // A function to create the question count number and the bullets spans
 function spanBullets(obj) {

@@ -1,0 +1,74 @@
+[
+    {
+        "title": " How do we make a rounded corner by using CSS?",
+        "answer_1": "border-radius",
+        "answer_2": "border-style",
+        "answer_3": "border-color",
+        "answer_4": "border-width",
+        "right_answer": "border-radius"
+    },
+    {
+        "title": "How do you declare class in CSS",
+        "answer_1": "You can use '#' ",
+        "answer_2": "You can use '.'",
+        "answer_3": "Using the word class",
+        "answer_4": "No right answer",
+        "right_answer": "You can use '.'"
+    },
+    {
+        "title": "What is the right order when you write margin: 10px;",
+        "answer_1": "right - bottom - left - top",
+        "answer_2": "left - top - right - bottom",
+        "answer_3": "bottom - left - top - right",
+        "answer_4": "top - right - bottom - left",
+        "right_answer": "top - right - bottom - left"
+    },
+    {
+        "title": "What does this code do: pointer-events: none",
+        "answer_1": "It prevent the user from clicking on the element",
+        "answer_2": "It make the mouse cursor like pointer",
+        "answer_3": "It allow the user to copy the element",
+        "answer_4": "All Solutions Are Wrong",
+        "right_answer": "It prevent the user from clicking on the element"
+    },
+    {
+        "title": "What does this selector does: *{}",
+        "answer_1": "It change the the properties of headers",
+        "answer_2": "It change the properties of all elements in the page",
+        "answer_3": "It change the properties of direct elements",
+        "answer_4": "All Solutions Are right",
+        "right_answer": "It change the properties of all elements in the page"
+    },
+    {
+        "title": "What does this selector does: header > div",
+        "answer_1": "Change all the divs inside the header",
+        "answer_2": "Change the header that has a class div inside",
+        "answer_3": "Change all the divs that are direct children to the header",
+        "answer_4": "It is a wrong declaration",
+        "right_answer": "Change all the divs that are direct children to the header"
+    },
+    {
+        "title": "What does this selector does: header ~ div",
+        "answer_1": "Change all the divs inside the header",
+        "answer_2": "Change the header that has a class div inside",
+        "answer_3": "Change all the divs that are direct siblings to the header",
+        "answer_4": "Change all the divs that are direct children to the header",
+        "right_answer": "Change all the divs that are direct siblings to the header"
+    },
+    {
+        "title": "How can we change the type of fonts inside the page",
+        "answer_1": "font-style",
+        "answer_2": "font-size",
+        "answer_3": "font-variant",
+        "answer_4": "font-family",
+        "right_answer": "font-family"
+    },
+    {
+        "title": "If we declare that the root element has a font-size of 20px, what will be the size header if the font-size: 2rem",
+        "answer_1": "16px",
+        "answer_2": "40px",
+        "answer_3": "10px",
+        "answer_4": "32px",
+        "right_answer": "40px"
+    }
+]
