@@ -1,62 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Quiz Game</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <body>
-        <div class="quiz-app">
-            <div class="quiz-info">
-                <p>Category:
-                    <span class="category-name">HTML</span>
-                </p>
-                <p>Questions count:
-                    <span class="q-count"></span>
-                </p>
+<body>
+    <div class="quiz-app">
+        <div class="quiz-info">
+            <p>Category:
+                <span class="category-name">HTML</span>
+            </p>
+            <p>Questions count:
+                <span class="q-count"></span>
+            </p>
+        </div>
+        <header class="category">
+            <div class="html active">HTML</div>
+            <div class="css">CSS</div>
+            <div class="js">JavaScript</div>
+        </header>
+        <main class="levels">
+            <div class="level">
+                <div class="easy " data-timer='90'>Easy</div>
+                <div class="medium" data-timer='50'>Medium</div>
+                <div class="difficult" data-timer='30'>Difficult</div>
             </div>
-            <header class="category">
-                <div class="html active">HTML</div>
-                <div class="css">CSS</div>
-                <div class="js">JavaScript</div>
-            </header>
-            <main class="levels">
-                <div class="level">
-                    <div class="easy active" data-timer='90'>Easy</div>
-                    <div class="medium" data-timer='50'>Medium</div>
-                    <div class="difficult" data-timer='30'>Difficult</div>
-                </div>
-                <p>Timer count will be: <span class="timer"></span> seconds.</p>
+            <p>Timer count will be: <span class="timer"></span> seconds.</p>
+        </main>
+        <div class="start active">Start Game</div>
+        <main class="quiz-area">
+            <main class="quiz-answers">
             </main>
-            <div class="start active">Start Game</div>
-            <main class="quiz-area">
-                <main class="quiz-answers">
-                </main>
-            </main>
-            <div class="submit">submit answer</div>
-            <div class="bullets">
-                <div class="spans">
-                </div>
-                <div class="count-down">
-                    <span class="minutes">00 :</span>
-                    <span class="seconds">00</span>
-                </div>
+        </main>
+        <div class="submit">submit answer</div>
+        <div class="bullets">
+            <div class="spans">
             </div>
-            <div class="results">
-                <p>
-                    <span class="result"></span>
-                    you have answered
-                    <span class="right-answers"></span>
-                    out of
-                    <span class="total-answers"></span>
-                </p>
+            <div class="count-down">
+                <span class="minutes">00 :</span>
+                <span class="seconds">00</span>
             </div>
         </div>
-        <script src="main.js"></script>
-    </body>
+        <div class="results">
+            <p>
+                <span class="result"></span>
+                you have answered
+                <span class="right-answers"></span>
+                out of
+                <span class="total-answers"></span>
+            </p>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
 
 </html>
