@@ -160,7 +160,7 @@ function showQuestions(obj) {
     // As the question inside the object is with the name of title, we used it to add to the page
     pQuestion.innerText = obj.title;
 
-    let arr = [0, 1, 2, 3];
+    let arr = [1, 2, 3, 4];
     let current = arr.length,
         random;
 
@@ -177,23 +177,23 @@ function showQuestions(obj) {
 
     console.log(arr);
     // The for loop to create the divs that contains all the answers
-    for (let i = 1; i <= arr.length; i++) {
+    for (let i = 1; i <= 4; i++) {
         let answerDiv = document.createElement("div");
         answerDiv.className = "answer";
 
         let radioBtn = document.createElement("input");
         radioBtn.type = "radio";
         radioBtn.name = "questions";
-        radioBtn.id = `answer_${i}`;
-        radioBtn.dataset.answer = obj[`answer_${i}`];
+        radioBtn.id = `answer_${arr[i]}`;
+        radioBtn.dataset.answer = obj[`answer_${arr[i]}`];
 
         if (i === 1) {
             radioBtn.checked = true;
         }
 
         let labelArea = document.createElement("label");
-        labelArea.setAttribute("for", `answer_${i}`);
-        labelArea.innerText = obj[`answer_${i}`];
+        labelArea.setAttribute("for", `answer_${arr[i]}`);
+        labelArea.innerText = obj[`answer_${arr[i]}`];
 
         answerDiv.appendChild(radioBtn);
         answerDiv.appendChild(labelArea);
