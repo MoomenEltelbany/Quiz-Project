@@ -152,7 +152,7 @@ function nextSpanOn(ind) {
 }
 
 // Function to get questions and put them inside the HTML page
-function showQuestions(obj, len) {
+function showQuestions(obj) {
     // Create the question P and appending it to the main div
     let pQuestion = document.createElement("p");
     pQuestion.className = "question";
@@ -160,8 +160,24 @@ function showQuestions(obj, len) {
     // As the question inside the object is with the name of title, we used it to add to the page
     pQuestion.innerText = obj.title;
 
+    let arr = [0, 1, 2, 3];
+    let current = arr.length,
+        random;
+
+    // a loop to go through all the element inside the array but our last element
+    while (current > 0) {
+        // Here we get a random number that we will use it as a index to swap it with another number
+        random = Math.floor(Math.random() * current);
+
+        current--;
+
+        // Here we use the destructuring method to sway the arr[current] which is each element from the last to the beginning with the arr[random] which is a random element from the array
+        [arr[current], arr[random]] = [arr[random], arr[current]];
+    }
+
+    console.log(arr);
     // The for loop to create the divs that contains all the answers
-    for (let i = 1; i <= 4; i++) {
+    for (let i = 1; i <= arr.length; i++) {
         let answerDiv = document.createElement("div");
         answerDiv.className = "answer";
 
