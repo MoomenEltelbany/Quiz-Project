@@ -37,7 +37,8 @@ header {
     align-items: center;
 }
 
-header > div {
+header > div,
+.level > div {
     padding: 10px 20px;
     border-radius: 5px;
     text-transform: uppercase;
@@ -45,7 +46,8 @@ header > div {
     opacity: 0.5;
 }
 
-header > div.active {
+header > div.active,
+.level > div.active {
     opacity: 1;
 }
 
@@ -59,6 +61,40 @@ header .js {
     background-color: #f6c13a;
 }
 
+.levels {
+    color: white;
+    background-color: white;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.levels .level {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.level .easy {
+    background-color: #4caf50;
+}
+.level .medium {
+    background-color: #9e9e9e;
+}
+.level .difficult {
+    background-color: #ff5722;
+}
+
+.levels p {
+    color: #607d8b;
+    font-size: 18px;
+}
+
+.levels p .timer {
+    color: #0075ff;
+}
+
 .start {
     background-color: #607d8b;
     width: 350px;
@@ -69,6 +105,7 @@ header .js {
     text-align: center;
     color: white;
     cursor: pointer;
+    user-select: none;
 }
 .quiz-app .quiz-area {
     background-color: white;

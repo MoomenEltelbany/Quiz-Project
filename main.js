@@ -1,6 +1,7 @@
 // Capturing the elements of HTML
 let categoryName = document.querySelector(".category-name");
 let startGame = document.querySelector(".start");
+let timerSpan = document.querySelector(".timer");
 let questionCount = document.querySelector(".quiz-info .q-count");
 let spansArea = document.querySelector(".bullets .spans");
 let quizAnswers = document.querySelector(".quiz-answers");
@@ -10,6 +11,7 @@ let totalAnswers = document.querySelector(".total-answers");
 let result = document.querySelector(".results .result");
 let countDown = document.querySelector(".count-down");
 let languagesBtns = document.querySelectorAll(".category div");
+let timerBtns = document.querySelectorAll(".level div");
 
 // Setting up auxiliary elements
 let indexCount = 0;
@@ -28,8 +30,21 @@ languagesBtns.forEach((btn) => {
     };
 });
 
+// Adding the active class to the chosen timer
+timerBtns.forEach((btn) => {
+    btn.onclick = () => {
+        timerSpan.innerHTML = btn.dataset.timer;
+        timerBtns.forEach((btn) => {
+            btn.classList.remove("active");
+        });
+        btn.classList.add("active");
+    };
+});
 // Starting the game by clicking on the start button
 startGame.onclick = () => {
+    // Remove the button from the page, so that we can't click on it again
+    startGame.style.display = "none";
+
     // Here we pass the parameter to choose which category we will generate the questions
     getsQuestion(categoryName.innerHTML.toLowerCase());
 };
@@ -55,7 +70,7 @@ function getsQuestion(fileName) {
             rightAnswers.innerHTML = rightAnswersCount;
 
             // Click on the submit button function
-            timer(10, questionObjectLength);
+            timer(+timerSpan.innerHTML, questionObjectLength);
             submitBtn.onclick = () => {
                 // Check if the question are finished or not
                 // If yes, the button will be removed as well as the answers
@@ -105,7 +120,7 @@ function getsQuestion(fileName) {
 
                     // The count down function
                     clearInterval(countDownInterval);
-                    timer(3, questionObjectLength);
+                    timer(+timerSpan.innerHTML, questionObjectLength);
                 }
             };
         }
