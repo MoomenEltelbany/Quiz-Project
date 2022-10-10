@@ -46,10 +46,13 @@ header > div,
   text-transform: uppercase;
   cursor: pointer;
   opacity: 0.5;
+  transition: 0.3s;
 }
 
 header > div.active,
-.level > div.active {
+.level > div.active,
+header > div:hover,
+.level > div:hover {
   opacity: 1;
 }
 
