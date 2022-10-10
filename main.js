@@ -170,7 +170,6 @@ function showQuestions(obj) {
     [arr[current], arr[random]] = [arr[random], arr[current]];
   }
 
-  console.log(arr);
   // The for loop to create the divs that contains all the answers
   for (let i = 0; i < 4; i++) {
     let answerDiv = document.createElement("div");
